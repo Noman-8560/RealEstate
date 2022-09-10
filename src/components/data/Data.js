@@ -19,10 +19,10 @@ export const nav = [
     text: "pricing",
     path: "/pricing",
   },
-  {
-    text: "contact",
-    path: "/contact",
-  },
+  // {
+  //   text: "contact",
+  //   path: "/contact",
+  // },
 ]
 export const featured = [
   {
@@ -42,12 +42,12 @@ export const featured = [
   },
   {
     cover: "../images/hero/h4.png",
-    name: "Office & Studio",
+    name: "Plots",
     total: "80 Property",
   },
   {
     cover: "../images/hero/h6.png",
-    name: "Villa & Condo",
+    name: "Farm House",
     total: "80 Property",
   },
 ]
