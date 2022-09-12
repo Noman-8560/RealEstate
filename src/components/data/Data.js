@@ -12,13 +12,13 @@ export const nav = [
     path: "/services",
   },
   {
-    text: "blog",
+    text: "Projects",
     path: "/blog",
   },
-  {
-    text: "pricing",
-    path: "/pricing",
-  },
+  // {
+  //   text: "pricing",
+  //   path: "/pricing",
+  // },
   // {
   //   text: "contact",
   //   path: "/contact",

@@ -1,6 +1,7 @@
 import React from "react";
 import { footer } from "../../data/Data";
 import "./footer.css";
+import RelatedMapIcon from "@rsuite/icons/RelatedMap";
 
 const Footer = () => {
   return (
@@ -18,13 +19,15 @@ const Footer = () => {
       </section> */}
 
       <footer>
-        <div className="container">
-          <div className="box">
-            <div className="logo">
-              <h1 className="had1">
-                <i>ABFA</i>
-              </h1>
-
+        <div className="container ">
+          <div className="box ">
+            <div className="logo justify-content-center">
+              <div>
+                <RelatedMapIcon style={{ fontSize: "4rem" }} color="#27ae60" />
+                <h2 className="had1">
+                  <i>ABFA</i>
+                </h2>
+              </div>
               {/* <img src='../images/logo-light.png' alt='' /> */}
               <h2>Do You Need Help With Anything?</h2>
               <p>
@@ -32,10 +35,10 @@ const Footer = () => {
                 in your inbox every month
               </p>
 
-              <div className="input flex">
+              {/* <div className="input flex">
                 <input type="text" placeholder="Email Address" />
                 <button>Subscribe</button>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -52,7 +55,7 @@ const Footer = () => {
         </div>
       </footer>
       <div className="legal">
-        <span>© 2021 ABFA. Designd By Developer.</span>
+        <span>© 2022 ABFA Marketing.</span>
       </div>
     </>
   );

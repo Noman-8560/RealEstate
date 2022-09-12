@@ -1,6 +1,6 @@
 header {
   background-color: #fff;
-  height: 10vh;
+  height: 14vh;
   box-shadow: 0 5px 30px rgb(0 22 84 / 10%);
   padding: 15px 0;
   position: sticky;
@@ -37,10 +37,9 @@ header .toggle {
 .had1{
   color: #27ae60;
 }
-.logo{
-  height: 50px;
-  width: 5px;
-}
+/* .logo{
+  height: 90px;
+} */
 @media screen and (max-width: 768px) {
   header {
     padding: 0;

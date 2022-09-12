@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "./header.css";
 import { nav } from "../../data/Data";
 import { Link } from "react-router-dom";
+import RelatedMapIcon from '@rsuite/icons/RelatedMap';
+// import { Gear, AddOutline } from '@rsuite/icons';
 
 const Header = () => {
   const [navList, setNavList] = useState(false);
@@ -10,11 +12,17 @@ const Header = () => {
     <>
       <header>
         <div className="container flex">
-          <div className="logo">
-            {/* <h1 className="had1"><i class="ri-pantone-line"></i><i>ABFA</i></h1> */}
-            {/* <img src='./images/logo.png' alt='' /> */}
-            <img src="./images/favicon.png" alt="" />
+          <div >
+            <RelatedMapIcon style={{ fontSize: "3rem" }} color="#27ae60"  />
+            <p className="had1" style={{ fontSize: "1rem" }}>
+              <i><b>ABFA</b></i>
+            </p>
           </div>
+
+          {/* <div className="logo">
+            <h1 className="had1"><i>ABFA</i></h1>
+            <img src='./images/logo1.png' alt='' />
+          </div> */}
           <div className="nav">
             <ul className={navList ? "small" : "flex"}>
               {nav.map((list, index) => (
