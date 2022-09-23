@@ -15,14 +15,6 @@ export const nav = [
     text: "Projects",
     path: "/projects",
   },
-  // {
-  //   text: "pricing",
-  //   path: "/pricing",
-  // },
-  // {
-  //   text: "contact",
-  //   path: "/contact",
-  // },
 ]
 export const featured = [
   {
