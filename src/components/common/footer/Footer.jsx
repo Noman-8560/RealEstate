@@ -1,11 +1,12 @@
 import React from "react";
 import { footer } from "../../data/Data";
 import "./footer.css";
-import RelatedMapIcon from "@rsuite/icons/RelatedMap";
 import FacebookOfficialIcon from "@rsuite/icons/legacy/FacebookOfficial";
 import GooglePlusCircleIcon from "@rsuite/icons/legacy/GooglePlusCircle";
 import TwitterIcon from "@rsuite/icons/legacy/Twitter";
 import LinkedinIcon from "@rsuite/icons/legacy/Linkedin";
+import HomeIcon from '@rsuite/icons/legacy/Home';
+
 
 const Footer = () => {
   return (
@@ -15,7 +16,7 @@ const Footer = () => {
           <div className="box aa ">
             <div className="logo justify-content-center">
               <div>
-                <RelatedMapIcon style={{ fontSize: "4rem" }} color="#27ae60" />
+                <HomeIcon style={{ fontSize: "4rem" }} color="#27ae60" />
                 <h2 className="had1">
                   <i>ABFA</i>
                 </h2>

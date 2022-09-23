@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./header.css";
 import { nav } from "../../data/Data";
 import { Link } from "react-router-dom";
-import RelatedMapIcon from '@rsuite/icons/RelatedMap';
+import HomeIcon from '@rsuite/icons/legacy/Home';
 // import { Gear, AddOutline } from '@rsuite/icons';
 
 const Header = () => {
@@ -13,7 +13,7 @@ const Header = () => {
       <header>
         <div className="container flex">
           <div >
-            <RelatedMapIcon style={{ fontSize: "3rem" }} color="#27ae60"  />
+            <HomeIcon style={{ fontSize: "3rem" }} color="#27ae60"  />
             <p className="had1" style={{ fontSize: "1rem" }}>
               <i><b>ABFA</b></i>
             </p>
