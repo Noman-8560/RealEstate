@@ -8,7 +8,7 @@ const Blog = () => {
   return (
     <>
       <section className='blog-out mb'>
-        <Back name='Blog' title='Blog Grid - Our Blogs' cover={img} />
+        <Back name='Projects' title='Our Projects' cover={img} />
         <div className='container recent'>
           <RecentCard />
         </div>
