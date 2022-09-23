@@ -2,22 +2,14 @@ import React from "react";
 import { footer } from "../../data/Data";
 import "./footer.css";
 import RelatedMapIcon from "@rsuite/icons/RelatedMap";
+import FacebookOfficialIcon from "@rsuite/icons/legacy/FacebookOfficial";
+import GooglePlusCircleIcon from "@rsuite/icons/legacy/GooglePlusCircle";
+import TwitterIcon from "@rsuite/icons/legacy/Twitter";
+import LinkedinIcon from "@rsuite/icons/legacy/Linkedin";
 
 const Footer = () => {
   return (
     <>
-      {/* <section className='footerContact'>
-        <div className='container'>
-          <div className='send flex'>
-            <div className='text'>
-              <h1>Do You Have Questions ?</h1>
-              <p>We'll help you to grow your career and growth.</p>
-            </div>
-            <button className='btn5'>Contact Us Today</button>
-          </div>
-        </div>
-      </section> */}
-
       <footer>
         <div className="container ">
           <div className="box aa ">
@@ -29,11 +21,40 @@ const Footer = () => {
                 </h2>
               </div>
               {/* <img src='../images/logo-light.png' alt='' /> */}
-              <h2>Do You Need Help With Anything?</h2>
-              <p>
-                Receive updates, hot deals, tutorials, discounts sent straignt
-                in your inbox every month
-              </p>
+              <h2 className="b">Do You Need Help With Anything?</h2>
+              <span>
+                {" "}
+                <a href="https://www.facebook.com/">
+                  <FacebookOfficialIcon
+                    style={{ fontSize: "2rem" }}
+                    color="#27ae60"
+                  />{" "}
+                </a>
+              </span>
+
+              <span>
+                {" "}
+                <a href="https://www.facebook.com/">
+                  <GooglePlusCircleIcon
+                    style={{ fontSize: "2rem" }}
+                    color="#27ae60"
+                  />{"  "}
+                </a>
+              </span>
+
+              <span>
+                {" "}
+                <a href="https://www.facebook.com/">
+                  <TwitterIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
+                </a>
+              </span>
+
+              <span>
+                {" "}
+                <a href="https://www.facebook.com/">
+                  <LinkedinIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
+                </a>
+              </span>
 
               {/* <div className="input flex">
                 <input type="text" placeholder="Email Address" />
