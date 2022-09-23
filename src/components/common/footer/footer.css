@@ -1,11 +1,11 @@
-.footerContact {
+/* .footerContact {
   background-color: #27ae60;
   padding: 40px 0;
   color: #fff;
 }
 .footerContact h1 {
   font-size: 40px;
-}
+} */
 footer {
   background-color: #1d2636;
   padding: 50px 0;
@@ -13,7 +13,7 @@ footer {
 }
 footer .container {
   display: grid;
-  grid-template-columns: 6fr 2fr 2fr 1fr;
+  grid-template-columns: 10fr;
   grid-gap: 20px;
 }
 footer img {
@@ -58,4 +58,7 @@ footer ul li {
   footer .container {
     grid-template-columns: repeat(2, 1fr);
   }
+}
+.aa{
+  text-align: center;
 }

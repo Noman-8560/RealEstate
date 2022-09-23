@@ -20,7 +20,7 @@ const Footer = () => {
 
       <footer>
         <div className="container ">
-          <div className="box ">
+          <div className="box aa ">
             <div className="logo justify-content-center">
               <div>
                 <RelatedMapIcon style={{ fontSize: "4rem" }} color="#27ae60" />
@@ -42,7 +42,7 @@ const Footer = () => {
             </div>
           </div>
 
-          {footer.map((val) => (
+          {/* {footer.map((val) => (
             <div className="box">
               <h3>{val.title}</h3>
               <ul>
@@ -51,7 +51,7 @@ const Footer = () => {
                 ))}
               </ul>
             </div>
-          ))}
+          ))} */}
         </div>
       </footer>
       <div className="legal">
