@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./header.css";
 import { nav } from "../../data/Data";
 import { Link } from "react-router-dom";
-import HomeIcon from '@rsuite/icons/legacy/Home';
+import HomeIcon from "@rsuite/icons/legacy/Home";
 import { useHistory } from "react-router-dom";
 
 const Header = () => {
@@ -11,22 +11,22 @@ const Header = () => {
   const signin = () => {
     history.push("/signin");
   };
+  const home = () => {
+    history.push("/");
+  };
 
   return (
     <>
       <header>
         <div className="container flex">
-          <div >
-            <HomeIcon style={{ fontSize: "3rem" }} color="#27ae60"  />
+          <div onClick={home}>
+            <HomeIcon style={{ fontSize: "3rem" }} color="#27ae60" />
             <p className="had1" style={{ fontSize: "1rem" }}>
-              <i><b>ABFA</b></i>
+              <i>
+                <b>ABFA</b>
+              </i>
             </p>
           </div>
-
-          {/* <div className="logo">
-            <h1 className="had1"><i>ABFA</i></h1>
-            <img src='./images/logo1.png' alt='' />
-          </div> */}
           <div className="nav">
             <ul className={navList ? "small" : "flex"}>
               {nav.map((list, index) => (
