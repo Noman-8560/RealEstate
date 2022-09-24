@@ -57,11 +57,6 @@ const Footer = () => {
                   <InstagramIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
                 </a>
               </span>
-
-              {/* <div className="input flex">
-                <input type="text" placeholder="Email Address" />
-                <button>Subscribe</button>
-              </div> */}
             </div>
           </div>
 
