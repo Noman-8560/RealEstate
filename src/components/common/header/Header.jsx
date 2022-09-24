@@ -8,8 +8,8 @@ import { useHistory } from "react-router-dom";
 const Header = () => {
   const [navList, setNavList] = useState(false);
   const history = useHistory();
-  const signup = () => {
-    history.push("/signup");
+  const signin = () => {
+    history.push("/signin");
   };
 
   return (
@@ -37,7 +37,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="button flex">
-            <button className="btn1 mb-2" onClick={signup}>
+            <button className="btn1 mb-2" onClick={signin}>
               <i className="fa fa-sign-out"></i> Sign In
             </button>
             <br />

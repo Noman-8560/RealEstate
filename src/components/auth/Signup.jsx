@@ -128,12 +128,11 @@ const Signup = () => {
                   <div className="d-flex justify-content-center align-items-center mt-4 l">
                     <span className="fw-normal">
                       Already have Account?{" "}
-                      <Link to="/scholar/signup" className="fw-bold aa">
+                      <Link to="/signin" className="fw-bold aa">
                         Sign In
                       </Link>
                     </span>
                   </div>
-
                 </Form>
               </FlexboxGrid.Item>
             </FlexboxGrid>
@@ -144,5 +143,3 @@ const Signup = () => {
   );
 };
 export default Signup;
-
-

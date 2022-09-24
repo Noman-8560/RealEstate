@@ -8,6 +8,8 @@ import Pricing from "../pricing/Pricing"
 import Project from "../project/Project"
 import Services from "../services/Services"
 import Signup from "../auth/Signup"
+import Signin from "../auth/Signin"
+
 // import Contact from "../contact/Contact"
 
 const Pages = () => {
@@ -22,6 +24,7 @@ const Pages = () => {
           <Route exact path='/projects' component={Project} />
           <Route exact path='/pricing' component={Pricing} />
           <Route exact path='/signup' component={Signup} />
+          <Route exact path='/signin' component={Signin} />
           {/* <Route exact path='/contact' component={Contact} /> */}
         </Switch>
         <Footer />
