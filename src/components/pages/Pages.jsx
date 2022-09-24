@@ -7,6 +7,7 @@ import About from "../about/About"
 import Pricing from "../pricing/Pricing"
 import Project from "../project/Project"
 import Services from "../services/Services"
+import Signup from "../auth/Signup"
 // import Contact from "../contact/Contact"
 
 const Pages = () => {
@@ -20,6 +21,7 @@ const Pages = () => {
           <Route exact path='/services' component={Services} />
           <Route exact path='/projects' component={Project} />
           <Route exact path='/pricing' component={Pricing} />
+          <Route exact path='/signup' component={Signup} />
           {/* <Route exact path='/contact' component={Contact} /> */}
         </Switch>
         <Footer />

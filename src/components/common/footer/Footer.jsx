@@ -2,10 +2,11 @@ import React from "react";
 import { footer } from "../../data/Data";
 import "./footer.css";
 import FacebookOfficialIcon from "@rsuite/icons/legacy/FacebookOfficial";
-import GooglePlusCircleIcon from "@rsuite/icons/legacy/GooglePlusCircle";
 import TwitterIcon from "@rsuite/icons/legacy/Twitter";
-import LinkedinIcon from "@rsuite/icons/legacy/Linkedin";
+import YoutubeIcon from "@rsuite/icons/legacy/Youtube";
 import HomeIcon from '@rsuite/icons/legacy/Home';
+import InstagramIcon from '@rsuite/icons/legacy/Instagram';
+
 
 
 const Footer = () => {
@@ -35,8 +36,8 @@ const Footer = () => {
 
               <span>
                 {" "}
-                <a href="https://www.facebook.com/">
-                  <GooglePlusCircleIcon
+                <a href="https://www.youtube.com/">
+                  <YoutubeIcon
                     style={{ fontSize: "2rem" }}
                     color="#27ae60"
                   />{"  "}
@@ -45,15 +46,15 @@ const Footer = () => {
 
               <span>
                 {" "}
-                <a href="https://www.facebook.com/">
+                <a href="https://twitter.com/i/flow/login">
                   <TwitterIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
                 </a>
               </span>
 
               <span>
                 {" "}
-                <a href="https://www.facebook.com/">
-                  <LinkedinIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
+                <a href="https://www.instagram.com/7">
+                  <InstagramIcon style={{ fontSize: "2rem" }} color="#27ae60" />{"  "}
                 </a>
               </span>
 

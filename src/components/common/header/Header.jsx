@@ -3,10 +3,14 @@ import "./header.css";
 import { nav } from "../../data/Data";
 import { Link } from "react-router-dom";
 import HomeIcon from '@rsuite/icons/legacy/Home';
-// import { Gear, AddOutline } from '@rsuite/icons';
+import { useHistory } from "react-router-dom";
 
 const Header = () => {
   const [navList, setNavList] = useState(false);
+  const history = useHistory();
+  const signup = () => {
+    history.push("/signup");
+  };
 
   return (
     <>
@@ -33,10 +37,7 @@ const Header = () => {
             </ul>
           </div>
           <div className="button flex">
-            {/* <h4>
-              <span>2</span> My List
-            </h4> */}
-            <button className="btn1 mb-2">
+            <button className="btn1 mb-2" onClick={signup}>
               <i className="fa fa-sign-out"></i> Sign In
             </button>
             <br />
