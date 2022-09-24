@@ -10,6 +10,7 @@ import {
 } from "rsuite";
 import "./signup.css";
 import { Card, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // const JSONView = ({ formValue, formError }) => (
 //   <div style={{ marginBottom: 10 }}>
@@ -78,12 +79,6 @@ const Signup = () => {
     console.log(formValue, "Form Value");
   };
 
-  // const handleCheckEmail = () => {
-  //   formRef.current.checkForField("email", (checkResult) => {
-  //     console.log(checkResult);
-  //   });
-  // };
-
   return (
     <Container>
       <Row className="justify-content-center">
@@ -91,9 +86,9 @@ const Signup = () => {
           {/* style={{ width: "25rem" }} */}
           <Card className="shadow e" style={{ width: "30rem" }}>
             <FlexboxGrid>
-              <FlexboxGrid.Item >
+              <FlexboxGrid.Item>
                 <div className="align-items-center d">
-                  <h3 className="mb-0">Signup</h3>
+                  <h2 className="mb-0">Sign up</h2>
                 </div>
                 <Form
                   ref={formRef}
@@ -120,13 +115,34 @@ const Signup = () => {
                     className="fields"
                   />
 
-                  <ButtonToolbar>
-                    <Button appearance="primary" className="but" onClick={handleSubmit}>
-                      Submit
+                  <ButtonToolbar className="wrapper">
+                    <Button
+                      appearance="primary"
+                      className="justify-content-center item1"
+                      onClick={handleSubmit}
+                    >
+                      Sign up
                     </Button>
                   </ButtonToolbar>
+
+                  <div className="d-flex justify-content-center align-items-center mt-4 l">
+                    <span className="fw-normal">
+                      Already have Account?{" "}
+                      <Link to="/scholar/signup" className="fw-bold aa">
+                        Sign In
+                      </Link>
+                    </span>
+                  </div>
+
                 </Form>
               </FlexboxGrid.Item>
             </FlexboxGrid>
           </Card>
         </Col>
+      </Row>
+    </Container>
+  );
+};
+export default Signup;
+
+
