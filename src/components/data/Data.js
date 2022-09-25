@@ -12,8 +12,8 @@ export const nav = [
     path: "/services",
   },
   {
-    text: "Projects",
-    path: "/projects",
+    text: "Property",
+    path: "/Properties",
   },
 ]
 export const featured = [

@@ -5,7 +5,7 @@ import Home from "../home/Home"
 import Footer from "../common/footer/Footer"
 import About from "../about/About"
 import Pricing from "../pricing/Pricing"
-import Project from "../project/Project"
+import Property from "../property/Property"
 import Services from "../services/Services"
 import Signup from "../auth/Signup"
 import Signin from "../auth/Signin"
@@ -21,7 +21,7 @@ const Pages = () => {
           <Route exact path='/' component={Home} />
           <Route exact path='/about' component={About} />
           <Route exact path='/services' component={Services} />
-          <Route exact path='/projects' component={Project} />
+          <Route exact path='/Properties' component={Property} />
           <Route exact path='/pricing' component={Pricing} />
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/signin' component={Signin} />
