@@ -1,40 +1,61 @@
-import React from "react"
-import { list } from "../../data/Data"
+import React, { useState, useEffect } from "react";
+import "./recent.css";
 
 const RecentCard = () => {
+  const [cardData, setCardData] = useState([]);
+
+  useEffect(() => {
+    // let token = localStorage.getItem("Authorization");
+    fetch("http://127.0.0.1:8000/api/list/", {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        return res.json();
+      })
+      .then((result) => {
+        console.log(result);
+        setCardData(result);
+      });
+  }, []);
+
   return (
     <>
-      <div className='content grid3 mtop'>
-        {list.map((val, index) => {
-          const { cover, category, location, name, price, type } = val
+      <div className="content grid3 mtop">
+        {cardData.map((cdata, index) => {
           return (
-            <div className='box shadow' key={index}>
-              <div className='img'>
-                <img src={cover} alt='' />
+            <div className="box shadow" key={index}>
+              <div className="img">
+                <img
+                  src={`http://127.0.0.1:8000${cdata.images}`}
+                  alt="property"
+                />
               </div>
-              <div className='text'>
-                <div className='category flex'>
-                  <span style={{ background: category === "For Sale" ? "#25b5791a" : "#ff98001a", color: category === "For Sale" ? "#25b579" : "#ff9800" }}>{category}</span>
+              <div className="text">
+                <div className="category flex">
+                  <span className="rec">{cdata.category}</span>
                   {/* <i className='fa fa-heart'></i> */}
                 </div>
-                <h4>{name}</h4>
+                <h4>{cdata.name}</h4>
                 <p>
-                  <i className='fa fa-location-dot'></i> {location}
+                  <i className="fa fa-location-dot"></i> {cdata.address}
                 </p>
               </div>
-              <div className='button flex'>
+              <div className="button flex">
                 <div>
-                  <button className='btn2'>{price}</button> 
+                  <button className="btn2">{cdata.price}</button>
                   {/* <label htmlFor=''>/sqft</label> */}
                 </div>
                 {/* <span>{type}</span> */}
               </div>
             </div>
-          )
+          );
         })}
       </div>
     </>
-  )
-}
+  );
+};
 
-export default RecentCard
+export default RecentCard;
