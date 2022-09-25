@@ -11,18 +11,8 @@ import {
 import "./signup.css";
 import { Card, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import MaskedInput from 'react-text-mask';
 
-// const JSONView = ({ formValue, formError }) => (
-//   <div style={{ marginBottom: 10 }}>
-//     <Panel className="json-tree-wrapper" header={<p>formValue</p>}>
-//       <JSONTree data={formValue} />
-//     </Panel>
-
-//     <Panel className="json-tree-wrapper" header={<p>formError</p>}>
-//       <JSONTree data={formError} />
-//     </Panel>
-//   </div>
-// );
 
 const { StringType, NumberType } = Schema.Types;
 
@@ -31,11 +21,8 @@ const model = Schema.Model({
   email: StringType()
     .isEmail("Please enter a valid email address.")
     .isRequired("This field is required."),
-  age: NumberType("Please enter a valid number.").range(
-    18,
-    30,
-    "Please enter a number from 18 to 30"
-  ),
+  phone: StringType().isRequired("This field is required."),
+
   password: StringType().isRequired("This field is required."),
   verifyPassword: StringType()
     .addRule((value, data) => {
@@ -50,6 +37,17 @@ const model = Schema.Model({
     .isRequired("This field is required."),
 });
 
+const InputMask = React.forwardRef(({ onChange, ...rest }, ref) => (
+  <MaskedInput
+    {...rest}
+    ref={ref}
+    className="rs-input"
+    onChange={event => {
+      onChange(event.target.value);
+    }}
+  />
+));
+
 const TextField = React.forwardRef((props, ref) => {
   const { name, label, accepter, ...rest } = props;
   return (
@@ -60,13 +58,16 @@ const TextField = React.forwardRef((props, ref) => {
   );
 });
 
+const mask = ['(', /[1-9]/, /\d/, ')', ' ', /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/,/\d/,/\d/,/\d/, /\d/];
+
+
 const Signup = () => {
   const formRef = React.useRef();
   const [formError, setFormError] = React.useState({});
   const [formValue, setFormValue] = React.useState({
     name: "",
     email: "",
-    age: "",
+    phone: "",
     password: "",
     verifyPassword: "",
   });
@@ -83,7 +84,6 @@ const Signup = () => {
     <Container>
       <Row className="justify-content-center">
         <Col xs={12} md={6} xl={6} className="login">
-          {/* style={{ width: "25rem" }} */}
           <Card className="shadow e" style={{ width: "30rem" }}>
             <FlexboxGrid>
               <FlexboxGrid.Item>
@@ -99,7 +99,13 @@ const Signup = () => {
                 >
                   <TextField name="name" label="Username" className="fields" />
                   <TextField name="email" label="Email" className="fields" />
-                  <TextField name="age" label="Age" className="fields" />
+                  <TextField
+                    name="phone"
+                    label="Phone Number"
+                    mask={mask}
+                    accepter={InputMask}
+                    className="fields"
+                  />
                   <TextField
                     name="password"
                     label="Password"
