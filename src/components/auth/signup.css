@@ -12,11 +12,7 @@
   display: grid;
   grid-template-rows: 1 1fr;
 }
-/* .cards {
-  max-width: 30rem;
-  margin: 0 auto;
-  display: grid;
-} */
+
 @media (min-width: 800px) {
   .e { grid-template-columns: repeat(1, 1fr); }
 }
