@@ -1,9 +1,9 @@
 .login {
-  margin-top: 3rem;
+  margin-top: 10rem;
   margin-bottom: 3rem;
 }
 .d {
-  margin-top: 1rem;
+  margin-top: 2rem;
   text-align: center;
   margin-bottom: -40px;
 }
@@ -12,14 +12,18 @@
   display: grid;
   grid-template-rows: 1 1fr;
 }
-.fields {
-  margin-top: 5px;
-}
-/* .but {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-
+/* .cards {
+  max-width: 30rem;
+  margin: 0 auto;
+  display: grid;
 } */
+@media (min-width: 800px) {
+  .e { grid-template-columns: repeat(1, 1fr); }
+}
+.fields {
+  margin-top: 10px;
+}
+
 .l{
   text-align: center;
   margin-bottom: 1rem;

@@ -8,7 +8,7 @@ const Property = () => {
   return (
     <>
       <section className='blog-out mb'>
-        <Back name='Projects' title='Our Projects' cover={img} />
+        <Back name='Property' title='Our Properties' cover={img} />
         <div className='container recent'>
           <RecentCard />
         </div>
