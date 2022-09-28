@@ -8,9 +8,9 @@ import {
   Button,
   Container,
   InputGroup,
+  Card,
 } from "react-bootstrap";
 import { Link, Redirect } from "react-router-dom";
-// import { Routes } from "../routes";
 import axios from "axios";
 // import { Alert } from "bootstrap";
 
@@ -164,18 +164,18 @@ const Signup = () => {
                   </div>
                 </Form>
 
-                {/* <div className="d-flex justify-content-center align-items-center mt-4">
+                <div className="d-flex justify-content-center align-items-center mt-4 l">
                   <span className="fw-normal">
                     Already have an account?
                     <Card.Link
                       as={Link}
-                      // to={Routes.Signin.path}
+                      to={"/signin"}
                       className="fw-bold"
                     >
-                      {` Login here `}
+                      {` Signin here `}
                     </Card.Link>
                   </span>
-                </div> */}
+                </div>
               </div>
             </Col>
           </Row>
