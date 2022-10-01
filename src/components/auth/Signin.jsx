@@ -1,16 +1,23 @@
 import React, { useState } from "react";
 import "./signin.css";
-import { Col, Row, Form, Button, Container, InputGroup, Card  } from "react-bootstrap";
+import {
+  Col,
+  Row,
+  Form,
+  Button,
+  Container,
+  InputGroup,
+  Card,
+} from "react-bootstrap";
 import { Link, useHistory, Redirect } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 // import {useAlert} from 'react-alert';
 const Signin = () => {
-  const [email, setemail] = useState("");
-  const [password, setpassword] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   // const alert = useAlert();
   const history = useHistory();
   const [error, setError] = useState("");
-
 
   let loginStatusCode;
   const handleSubmit = async (e) => {
@@ -32,27 +39,27 @@ const Signin = () => {
             setError(response.detail);
             // alert.error('invalid Email or Password...')
             history.push("/signin");
-            // alert("Error")
+            alert("Invalid Credentials");
           } else {
             setError("invalid Credentials");
             history.push("/signin");
-            // alert("Error")
+            alert("Invalid Credentials");
           }
         } else {
-          localStorage.setItem("Authorization", `${response.access_token}`);
+          localStorage.setItem("Authorization", `${response.jwt}`);
           setError("");
           // alert.success('Sign In Successfully...')
           history.push("/");
-          // alert("Success")
+          alert("Login Successfully");
         }
       })
       .catch((error) => {
         console.log(error);
         // setError("Network error");
         // alert.error("Error in Network or server");
+        alert("Error in Network or server");
       });
   };
-
 
   return (
     <>
@@ -76,7 +83,7 @@ const Signin = () => {
                         autoFocus
                         required
                         type="email"
-                        onChange={(e) => setemail(e.target.value)}
+                        onChange={(e) => setEmail(e.target.value)}
                       />
                     </InputGroup>
                   </Form.Group>
@@ -89,7 +96,7 @@ const Signin = () => {
                           name="Password"
                           required
                           type="password"
-                          onChange={(e) => setpassword(e.target.value)}
+                          onChange={(e) => setPassword(e.target.value)}
                         />
                       </InputGroup>
                     </Form.Group>
@@ -108,21 +115,16 @@ const Signin = () => {
                 <div className="d-flex justify-content-center align-items-center mt-4 l">
                   <span className="fw-normal">
                     Not registered?
-                    <Card.Link
-                      className="fw-bold"
-                      as={Link}
-                      to={"/signup"}
-                    >
+                    <Card.Link className="fw-bold" as={Link} to={"/signup"}>
                       {` Create account `}
                     </Card.Link>
                   </span>
-                </div> 
+                </div>
               </div>
             </Col>
           </Row>
         </Container>
       </section>
-      
     </>
   );
 };

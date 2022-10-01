@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./header.css";
 import { nav } from "../../data/Data";
 import { Link } from "react-router-dom";
 import HomeIcon from "@rsuite/icons/legacy/Home";
 import { useHistory } from "react-router-dom";
+import axios from "axios";
 
 const Header = () => {
   const [navList, setNavList] = useState(false);
@@ -14,6 +15,32 @@ const Header = () => {
   const home = () => {
     history.push("/");
   };
+  const [authToken, setAuthToken] = useState(false);
+  // const [dashboardLink, setDashboardLink] = useState("/");
+
+  useEffect(() => {
+    let token = localStorage.getItem("Authorization");
+    if (token) {
+      console.log(token);
+      axios
+        .get("http://127.0.0.1:8000/api/user", {
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+          },
+        })
+        .then((res) => {
+          console.log(res);
+          setAuthToken(true);
+        })
+        .catch((err) => {
+          setAuthToken(false);
+        });
+    } else {
+      console.log("no token");
+      setAuthToken(false);
+    }
+  }, []);
 
   return (
     <>
@@ -36,10 +63,29 @@ const Header = () => {
               ))}
             </ul>
           </div>
+
           <div className="button flex">
-            <button className="btn1 mb-2" onClick={signin}>
+            {authToken ? (
+              <>
+                <button
+                  // as={Link}
+                  // to={dashboardLink}
+                  className="mt-1"
+                  variant="outline-secondary"
+                >
+                  {" "}
+                  Dashboard
+                </button>
+              </>
+            ) : (
+              <button className="btn1 mb-2" onClick={signin}>
+                <i className="fa fa-sign-out"></i> Sign In
+              </button>
+            )}
+
+            {/* <button className="btn1 mb-2" onClick={signin}>
               <i className="fa fa-sign-out"></i> Sign In
-            </button>
+            </button> */}
             <br />
           </div>
 
