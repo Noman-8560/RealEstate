@@ -15,6 +15,10 @@ export const nav = [
     text: "Property",
     path: "/Properties",
   },
+  {
+    text: "Buy",
+    path: "/buy",
+  },
 ]
 export const featured = [
   {

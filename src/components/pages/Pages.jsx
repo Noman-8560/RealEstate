@@ -9,6 +9,7 @@ import Property from "../property/Property"
 import Services from "../services/Services"
 import Signup from "../auth/Signup"
 import Signin from "../auth/Signin"
+import Buy from "../buy/Buy"
 
 // import Contact from "../contact/Contact"
 
@@ -25,7 +26,7 @@ const Pages = () => {
           <Route exact path='/pricing' component={Pricing} />
           <Route exact path='/signup' component={Signup} />
           <Route exact path='/signin' component={Signin} />
-          {/* <Route exact path='/contact' component={Contact} /> */}
+          <Route exact path='/buy' component={Buy} />
         </Switch>
         <Footer />
       </Router>

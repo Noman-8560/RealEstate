@@ -31,7 +31,6 @@ const RecentCard = () => {
                 <img
                   src={`http://127.0.0.1:8000${cdata.images}`}
                   alt="property"
-
                 />
               </div>
               <div className="text">
@@ -46,13 +45,11 @@ const RecentCard = () => {
                 <p>{cdata.price} PKR</p>
               </div>
               <hr />
-              <div className="button flex">
+              {/* <div className="button flex">
                 <div>
                   <button className="btn2">Buy Now</button>
-                  {/* <label htmlFor=''>/sqft</label> */}
                 </div>
-                {/* <span>{type}</span> */}
-              </div>
+              </div> */}
             </div>
           );
         })}

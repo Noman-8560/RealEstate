@@ -18,29 +18,31 @@ const Header = () => {
   const [authToken, setAuthToken] = useState(false);
   // const [dashboardLink, setDashboardLink] = useState("/");
 
-  useEffect(() => {
-    let token = localStorage.getItem("Authorization");
-    if (token) {
-      console.log(token);
-      axios
-        .get("http://127.0.0.1:8000/api/user", {
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${token}`,
-          },
-        })
-        .then((res) => {
-          console.log(res);
-          setAuthToken(true);
-        })
-        .catch((err) => {
-          setAuthToken(false);
-        });
-    } else {
-      console.log("no token");
-      setAuthToken(false);
-    }
-  }, []);
+  // useEffect(() => {
+  //   let token = localStorage.getItem("Authorization");
+  //   if (token) {
+  //     console.log(token);
+  //     axios
+  //       .get("http://localhost:8000/api/user", {
+  //         headers: {
+  //           "Content-Type": "application/json",
+  //           Authorization: `Bearer ${token}`,
+  //         },
+  //       })
+  //       .then((res) => {
+  //         console.log("Yes...");
+  //         console.log(res);
+  //         setAuthToken(true);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //         setAuthToken(false);
+  //       });
+  //   } else {
+  //     console.log("no token");
+  //     setAuthToken(false);
+  //   }
+  // }, []);
 
   return (
     <>
@@ -65,7 +67,7 @@ const Header = () => {
           </div>
 
           <div className="button flex">
-            {authToken ? (
+            {/* {authToken ? (
               <>
                 <button
                   // as={Link}
@@ -81,11 +83,11 @@ const Header = () => {
               <button className="btn1 mb-2" onClick={signin}>
                 <i className="fa fa-sign-out"></i> Sign In
               </button>
-            )}
+            )} */}
 
-            {/* <button className="btn1 mb-2" onClick={signin}>
+            <button className="btn1 mb-2" onClick={signin}>
               <i className="fa fa-sign-out"></i> Sign In
-            </button> */}
+            </button>
             <br />
           </div>
 
