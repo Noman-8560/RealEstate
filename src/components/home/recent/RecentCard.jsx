@@ -42,7 +42,7 @@ const RecentCard = () => {
                 <p>
                   <i className="fa fa-location-dot"></i> {cdata.address}
                 </p>
-                <p>{cdata.price} PKR</p>
+                <p>${cdata.price}</p>
               </div>
               <hr />
               {/* <div className="button flex">
